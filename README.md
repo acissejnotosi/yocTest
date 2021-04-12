@@ -17,6 +17,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm start`
 
+## Browser Compatibility
+
+The project was tested using Android and Galasy S5 dimensions on Google Chrome browser.
+
 ## Intersection Observer
 
 To determine when the video advertisement was in the viewport with at least 50% threshold the IntersectionObserver API was used. For more information about the IntersectionObserver API please visit https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API.
