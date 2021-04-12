@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 type Root = Element | Document | null;
-
 type RootMargin = string;
-
 type Threshold = number | number[];
+type Ref = React.RefObject<HTMLVideoElement>;
 
-export function useIntersectionObserver(ref: React.RefObject<HTMLVideoElement>, root: Root, rootMargin: RootMargin, threshold: Threshold): boolean {
+export const useIntersectionObserver = (ref: Ref, root: Root, rootMargin: RootMargin, threshold: Threshold): boolean => {
 
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -27,8 +26,7 @@ export function useIntersectionObserver(ref: React.RefObject<HTMLVideoElement>, 
       threshold: threshold
     }
     const observer = new IntersectionObserver(intersectionObserverCallback, options);
-    if (currentRef) observer.observe(currentRef);
-
+    if (ref.current) observer.observe(ref.current);
     return () => {
       if (currentRef) observer.observe(currentRef);
     }
