@@ -27,6 +27,5 @@ To determine when the video advertisement was in the viewport with at least 50% 
 
 ## Testing
 
-The Cypress testing framework was used for testing. Jest could be used for testing, but Cypress were a easier way to have things tested faster.
+The Cypress testing framework was used for testing. The tests were made based on the main functionalities in order to guarantee they were working correctly. The main functionalities are: the messages on the browser output and the intersection with the video.
 
-The tests were made based on the main functionalities in order to guarantee they were working correctly.
